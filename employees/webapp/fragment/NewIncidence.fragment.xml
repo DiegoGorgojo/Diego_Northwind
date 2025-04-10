@@ -13,7 +13,15 @@ ${form>Type} === '2'?   'error' : ''
 
  }" />
 <Title text="{i18n>incidence} ({form>Index})" wrapping="true"/>
-
+<ToolbarSpacer/>
+<Button 
+icon="sap-icon://save"
+type="Emphasized"
+press="onSavePress"/>
+<Button 
+icon="sap-icon://delete"
+type="Reject"
+press="onDeletePress"/>
 </Toolbar>
 
 </headerToolbar>
@@ -21,18 +29,21 @@ ${form>Type} === '2'?   'error' : ''
 <HBox >
 <VBox class="sapUiSmallMarginEnd">
 <Text text="{i18n>date}:"/>
-<DatePicker dateValue="{form>CreationDate}"/>
+<DatePicker dateValue="{form>CreationDate}"
+            change="updateIncidenceCreationDate"/>
 </VBox>
 
 <VBox class="sapUiSmallMarginEnd">
 <Text text="{i18n>reason}:"/>
-<Input value="{form>Reason}"/>
+<Input value="{form>Reason}"
+           change="updateIncidenceReason"/>
 </VBox>
 
 <VBox >
 <Text text="{i18n>type}:"/>
 <Select 
-selectedKey="{form>Type}">
+selectedKey="{form>Type}"
+change="updateIncidenceType">
 <core:Item key="-1" text="{i18n>empty}"/>
 <core:Item key="0" text="{i18n>incidenceCorrect}"/>
 <core:Item key="1" text="{i18n>incidencePending}"/>

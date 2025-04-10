@@ -22,5 +22,13 @@
                 type="XML"
             />
         </f:midColumnPages>
+
+        <f:endColumnPages>
+        <mvc:XMLView id="other"
+                    viewName="com.logaligroup.employees.view.OrderDetails"
+                    type="XML"/>
+        
+        </f:endColumnPages>
+
     </f:FlexibleColumnLayout>
 </mvc:View>

@@ -1,0 +1,9 @@
+<mvc:View controllerName="com.logaligroup.employees.controller.OrderDetails"
+          xmlns="sap.m"
+          xmlns:mvc="sap.ui.core.mvc">
+
+
+
+
+
+</mvc:View>

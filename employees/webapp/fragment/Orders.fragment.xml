@@ -25,7 +25,9 @@ growing="true">
 
 <items>
 
-<ColumnListItem >
+<ColumnListItem 
+type="Navigation"
+press="onNavToOrderDetails">
 <cells>
 <Text text="{northwind>OrderID}"/>
 <Text text="{northwind>Freight}"/>

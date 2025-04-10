@@ -74,7 +74,7 @@ const router = this.getRouter();
 const viewModel = this.getModel("view") as JSONModel;
 viewModel.setProperty("/layout", "TwoColumnsMidExpanded");
 /**console.log(parseInt(id)); **/
-router.navTo("RouteDeatails", {
+router.navTo("RouteDetails", {
 /**    id: parseInt(id) - 1  */ 
 id: id
 });
