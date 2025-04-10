@@ -83,7 +83,7 @@ return new Promise((resolve, reject)=>{
     model.create(path, data, {
         success: async function () {
             MessageBox.success(resourceBundle.getText("success") || 'no text defined');
-         resolve(await $this.read(object));
+         //resolve(await $this.read(object));
          // resolve($this.read(object));
             //  $this.read(object);
         },
@@ -110,7 +110,7 @@ return new Promise((resolve, reject)=>{
         model.update(path, data, {
             success: async function () {
                 MessageBox.success(resourceBundle.getText("success") || 'no text defined');
-                resolve(await $this.read(object));
+             //   resolve(await $this.read(object));
             }, 
             error: function () {
                 MessageBox.error(resourceBundle.getText("error") || 'no text defined');
@@ -133,7 +133,7 @@ return new Promise((resolve, reject)=>{
         this.model.remove(path, {
             success: async function () {
                 MessageBox.success(resourceBundle.getText("success") || 'no text defined');  
-                resolve(await $this.read(object));
+               // resolve(await $this.read(object));
             },
             error: function () {
                 MessageBox.error(resourceBundle.getText("error") || 'no text defined');  

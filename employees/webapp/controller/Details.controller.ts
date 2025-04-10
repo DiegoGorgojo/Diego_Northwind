@@ -15,6 +15,8 @@ import {Input$ChangeEvent} from "sap/ui/webc/main/Input";
 import {Input$LiveChangeEvent} from "sap/m/Input";
 import {Select$ChangeEvent} from "sap/m/Select";
 import { UploadSetwithTableActionPlaceHolder } from "sap/m/library";
+import ObjectListItem from "sap/m/ObjectListItem";
+import Event from "sap/ui/base/Event";
 /**
  * @namespace com.logaligroup.employees.view.controller
  */
@@ -239,7 +241,23 @@ public updateIncidenceReason (event : Input$ChangeEvent) : void {
  let object = context.getObject() as any;
  object.TypeX = true;
  }
- public onNavToOrderDetails () : void {
-  
+ public onNavToOrderDetails (event: Event) : void {
+  const item = event.getSource() as ObjectListItem;
+  const bindingContext = item.getBindingContext("northwind") as Context;
+  const sEmployeeId = bindingContext.getProperty("EmployeeID").toString();
+  const sOrderId = bindingContext.getProperty("OrderId").toString();
+  //console.log(sEmployeeId);
+  //console.log(sOrderId);
+  //console.log(bindingContext.getPath());
+console.log(bindingContext.getPath());
+
+  const viewModel = this.getModel("view") as JSONModel;
+  viewModel.setProperty("/layout", "EndColumnFullScreen");
+
+  const router = this.getRouter();
+  router.navTo("RouterOrderdetails", {
+    employeeId: sEmployeeId, 
+    orderId: sOrderId
+  });
  }
 }

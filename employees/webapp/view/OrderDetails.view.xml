@@ -1,6 +1,53 @@
 <mvc:View controllerName="com.logaligroup.employees.controller.OrderDetails"
           xmlns="sap.m"
+          xmlns:uxap="sap.uxap"
           xmlns:mvc="sap.ui.core.mvc">
+
+          <uxap:ObjectPageLayout >
+          
+          <uxap:headerTitle>
+
+          <uxap:ObjectPageDynamicHeaderTitle >
+          <uxap:expandedHeading>
+
+          <HBox >
+          <Title text="{i18n>customerID} : {northwind>CustomerID}"/>
+          </HBox>
+          
+          </uxap:expandedHeading>
+
+          <uxap:snappedHeading>
+          
+          <HBox >
+          <Title text="{i18n>customerID} : {northwind>CustomerID}"/>
+          </HBox>
+
+          </uxap:snappedHeading>
+
+          <uxap:expandedContent>
+<Text text="{i18n>OrderID} : {northwind>OrderID}"/>
+          
+          </uxap:expandedContent>
+
+
+          <uxap:snappedContent>
+    <Text text="{i18n>OrderID} : {northwind>OrderID}"/>      
+          </uxap:snappedContent>
+          
+          </uxap:ObjectPageDynamicHeaderTitle>
+          
+          </uxap:headerTitle>
+
+          
+          <uxap:sections>
+          
+          
+          </uxap:sections>
+          
+          
+          
+          
+          </uxap:ObjectPageLayout>
 
 
 
